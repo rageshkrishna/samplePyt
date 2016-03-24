@@ -1,18 +1,15 @@
-
 # Language setting
 language: python
 
 # Version number
 python:
-  - 2.6
-  - 2.7
-  - 3.2
-  - 3.3
   - 3.4
-  - 3.5
-  - pypy
-  - pypy3
 
 build:
+  pre_ci_boot:
+    image_name: shippable/minv2
+    image_tag: latest
+    pull: false
+
   ci:
     - python --version
